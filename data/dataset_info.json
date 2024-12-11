@@ -571,6 +571,13 @@
       "prompt": "content"
     }
   },
+  "redpajama_v1_Sample": {
+    "hf_hub_url": "togethercomputer/RedPajama-Data-1T-Sample",
+    "columns": {
+      "prompt": "text"
+    },
+    "subset": "plain_text"
+  },
   "redpajama_v2": {
     "hf_hub_url": "togethercomputer/RedPajama-Data-V2",
     "columns": {

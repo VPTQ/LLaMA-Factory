@@ -151,6 +151,10 @@ def load_model(
         else:
             if type(config) in AutoModelForVision2Seq._model_mapping.keys():  # assume built-in models
                 load_class = AutoModelForVision2Seq
+            # hack for vptq before huggingface support
+            elif 'vptq' in model_args.model_name_or_path.lower():
+                import vptq
+                load_class = vptq.AutoModelForCausalLM
             else:
                 load_class = AutoModelForCausalLM
 
