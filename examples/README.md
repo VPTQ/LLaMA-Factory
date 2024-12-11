@@ -229,6 +229,11 @@ bash examples/extras/llama_pro/expand.sh
 llamafactory-cli train examples/extras/llama_pro/llama3_freeze_sft.yaml
 ```
 
+#### based on 2-bit VPTQ quantization Fine-Tuning
+```bash
+llamafactory-cli train examples/train_full/llama3_full_vptq.yaml
+```
+
 #### FSDP+QLoRA Fine-Tuning
 
 ```bash

@@ -52,6 +52,7 @@ class QuantizationMethod(str, Enum):
     GPTQ = "gptq"
     AWQ = "awq"
     AQLM = "aqlm"
+    VPTQ = "vptq"
     QUANTO = "quanto"
     EETQ = "eetq"
     HQQ = "hqq"
@@ -127,6 +128,10 @@ def configure_quantization(
 
         if quant_method == QuantizationMethod.AQLM:
             require_version("aqlm>=1.1.0", "To fix: pip install aqlm[gpu]>=1.1.0")
+            quantization_config["bits"] = 2
+
+        if quant_method == QuantizationMethod.VPTQ:
+            require_version("vptq", "To fix: pip install vptq")
             quantization_config["bits"] = 2
 
         quant_bits = quantization_config.get("bits", "?")

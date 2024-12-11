@@ -229,6 +229,11 @@ bash examples/extras/llama_pro/expand.sh
 llamafactory-cli train examples/extras/llama_pro/llama3_freeze_sft.yaml
 ```
 
+#### 基于 2 比特 VPTQ 量化微调
+```bash
+llamafactory-cli train examples/train_full/llama3_full_vptq.yaml
+```
+
 #### FSDP+QLoRA 微调
 
 ```bash
